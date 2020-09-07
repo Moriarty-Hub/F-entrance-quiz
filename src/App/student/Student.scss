@@ -4,6 +4,25 @@
   background: #eeeeee;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.student-item {
+  width: 70px;
+  padding: 5px 20px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  background: darkgray;
+}
+
+main {
+  margin-bottom: 10px;
+}
+
 .header {
   display: flex;
   align-items: center;
