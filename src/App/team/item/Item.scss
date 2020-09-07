@@ -1,0 +1,25 @@
+table {
+  margin: 15px auto;
+  width: 95%;
+  border: 1px solid #393e46;
+}
+
+th {
+  color: white;
+  height: 40px;
+  background: #929aab;
+  border: 0;
+}
+
+.student-list {
+  list-style: none;
+  display: flex;
+  margin-left: 20px;
+}
+
+.student-item {
+  width: 70px;
+  padding: 5px 20px;
+  margin-right: 20px;
+  background: darkgray;
+}
