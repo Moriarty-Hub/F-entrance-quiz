@@ -13,7 +13,7 @@ ul {
 }
 
 .trainee-item, input {
-  width: 70px;
+  width: 110px;
   padding: 5px 20px;
   margin-right: 20px;
   margin-bottom: 5px;
@@ -33,4 +33,10 @@ main {
 
 input {
   background: white;
+}
+
+.add-button {
+  width: 110px;
+  height: 30px;
+  padding: 5px 20px;
 }

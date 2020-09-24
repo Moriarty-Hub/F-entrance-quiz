@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Trainer.scss';
+import 'antd/dist/antd.css'
 import { Popover } from 'antd';
 
 class Trainer extends Component {

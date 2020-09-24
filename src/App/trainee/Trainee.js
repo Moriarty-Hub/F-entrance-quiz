@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './Trainee.scss';
-import { Popover } from 'antd';
+import 'antd/dist/antd.css'
+import { Button, Popover } from 'antd';
+import { BrowserRouter, NavLink } from 'react-router-dom';
+import CreateTraineePage from '../createTrainee/CreateTraineePage';
 
 class Trainee extends Component {
 
@@ -47,9 +50,11 @@ class Trainee extends Component {
               </li>
             ))}
             <li>
-              <form onSubmit={this.onSubmit}>
-                <input type="text" name="traineeName" onChange={this.onChange}/>
-              </form>
+              <BrowserRouter>
+                <Button className="add-button">
+                  <NavLink exact to="/trainee/create" component={CreateTraineePage} >添加学员</NavLink>
+                </Button>
+              </BrowserRouter>
             </li>
           </ul>
         </div>

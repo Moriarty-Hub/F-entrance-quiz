@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.scss';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Team from './team/Team';
 import Trainee from './trainee/Trainee';
 import Trainer from './trainer/Trainer';
+import CreateTraineePage from './createTrainee/CreateTraineePage';
 
 class App extends Component {
 
@@ -55,9 +57,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Team/>
-        <Trainer ungroupedTrainers={this.state.ungroupedTrainers} />
-        <Trainee ungroupedTrainees={this.state.ungroupedTrainees} />
+        <BrowserRouter>
+          <Team/>
+          <Trainer ungroupedTrainers={this.state.ungroupedTrainers} />
+          <Trainee ungroupedTrainees={this.state.ungroupedTrainees} />
+          <Route exact path="/trainee/create" component={CreateTraineePage}/>
+        </BrowserRouter>
+
       </div>
     );
   }
