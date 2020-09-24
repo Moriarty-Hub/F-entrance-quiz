@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Student.scss';
+import './Trainee.scss';
 
-class Student extends Component {
+class Trainee extends Component {
 
   constructor(props) {
     super(props);
@@ -28,18 +28,18 @@ class Student extends Component {
 
   render() {
     return (
-      <div className="student">
+      <div className="trainee">
         <div className="header">
           <h3>学员列表</h3>
         </div>
         <div className="main">
           <ul>
-            {this.props.students.map((student) => (
-              <li key={student.id} className="student-item">{student.id}. {student.name}</li>
+            {this.props.ungroupedTrainees.map((trainee) => (
+              <li key={trainee.id} className="trainee-item">{trainee.id}. {trainee.name}</li>
             ))}
             <li>
               <form onSubmit={this.onSubmit}>
-                <input type="text" name="studentName" onChange={this.onChange}/>
+                <input type="text" name="traineeName" onChange={this.onChange}/>
               </form>
             </li>
           </ul>
@@ -49,4 +49,4 @@ class Student extends Component {
   }
 }
 
-export default Student;
+export default Trainee;
