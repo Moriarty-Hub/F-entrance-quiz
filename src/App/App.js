@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './App.scss';
 import Team from './team/Team';
 import Trainee from './trainee/Trainee';
+import Trainer from './trainer/Trainer';
 
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      ungroupedTrainees: []
+      ungroupedTrainees: [],
+      ungroupedTrainers: []
     }
   }
 
@@ -32,12 +34,29 @@ class App extends Component {
           ungroupedTrainees: value
         })
       })
+
+    fetch("http://localhost:8080/trainers?grouped=false")
+      .then(response =>
+        response.json()
+      )
+      .then(trainers=>{
+        const value = trainers.map((trainer) => {
+          return {
+            id: trainer.id,
+            name: trainer.name,
+          }
+        })
+        this.setState({
+          ungroupedTrainers: value
+        })
+      })
   }
 
   render() {
     return (
       <div>
         <Team/>
+        <Trainer ungroupedTrainers={this.state.ungroupedTrainers} />
         <Trainee ungroupedTrainees={this.state.ungroupedTrainees} />
       </div>
     );
