@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Trainee.scss';
+import { Popover } from 'antd';
 
 class Trainee extends Component {
 
@@ -35,7 +36,15 @@ class Trainee extends Component {
         <div className="main">
           <ul>
             {this.props.ungroupedTrainees.map((trainee) => (
-              <li key={trainee.id} className="trainee-item">{trainee.id}. {trainee.name}</li>
+              <li key={trainee.id} className="trainee-item">
+                <div>
+                  <Popover content={`id: ${trainee.id}, name: ${trainee.name}, 
+                  office: ${trainee.office}, email: ${trainee.email}, 
+                  github: ${trainee.github}, zoomId: ${trainee.zoomId}`} trigger="hover">
+                    {trainee.id}. {trainee.name}
+                  </Popover>
+                </div>
+              </li>
             ))}
             <li>
               <form onSubmit={this.onSubmit}>
