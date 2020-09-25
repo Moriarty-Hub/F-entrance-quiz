@@ -4,6 +4,7 @@
   background: #eeeeee;
 }
 
+// TODO 避免顶层使用标签选择器
 ul {
   list-style: none;
   display: flex;
@@ -12,7 +13,8 @@ ul {
   margin-right: 20px;
 }
 
-.trainee-item, input {
+.trainee-item,
+input {
   width: 110px;
   padding: 5px 20px;
   margin-right: 20px;
@@ -20,6 +22,7 @@ ul {
   background: darkgray;
 }
 
+// TODO 无效的css
 main {
   margin-bottom: 10px;
 }

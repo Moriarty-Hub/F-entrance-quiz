@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './Item.scss';
 
 class Item extends Component {
-
   render() {
     return (
+      // TODO class命名过于笼统
       <div className="item">
         <table>
           <thead>
@@ -15,10 +15,13 @@ class Item extends Component {
           <tbody>
             <tr>
               <td>
+                {/* TODO tab了相关内容不要和list混用 */}
                 <ul className="student-list">
-                {this.props.students.map((student => (
-                  <li key={student.id} className="student-item">{student.id}. {student.name}</li>
-                )))}
+                  {this.props.students.map((student) => (
+                    <li key={student.id} className="student-item">
+                      {student.id}. {student.name}
+                    </li>
+                  ))}
                 </ul>
               </td>
             </tr>

@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import './Trainer.scss';
-import 'antd/dist/antd.css'
+import 'antd/dist/antd.css';
 import { Popover } from 'antd';
 
 class Trainer extends Component {
-
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
+    // TODO 冗余的state设置
+    this.state = {};
   }
 
   render() {
