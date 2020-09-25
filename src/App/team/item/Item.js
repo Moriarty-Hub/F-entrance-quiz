@@ -15,7 +15,7 @@ class Item extends Component {
           <tbody>
             <tr>
               <td>
-                {/* TODO tab了相关内容不要和list混用 */}
+                {/* TODO table相关内容不要和list混用 */}
                 <ul className="student-list">
                   {this.props.students.map((student) => (
                     <li key={student.id} className="student-item">
